@@ -1,0 +1,29 @@
+<body>
+  <div class="container">
+    <h1>Saleae Test Project</h1>
+    {{>docForm}}
+  </div>
+</body>
+
+<template name="docForm">
+  {{#with sdoc}}
+  <form role="form" class="form vertical-form edit-document" method="POST">
+    <div class="form-group">
+      <label class="control-label">{{field1Label}}</label>
+      <input type="text" id="field1Value" name="field1Value" class="form-control" value="{{field1Value}}" />
+    </div>
+
+    <div class="form-group">
+      <label class="control-label">{{field2Label}}</label>
+      <input type="text" id="field2Value" name="field2Value" class="form-control" value="{{field2Value}}" />
+    </div>
+
+    <div class="form-group">
+      <label class="control-label">{{field3Label}}</label>
+      <input type="text" id="field3Value" name="field3Value" class="form-control" value="{{field3Value}}" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  {{/with}}
+</template>
